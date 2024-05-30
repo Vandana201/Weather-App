@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background-color: black;
+            color: white;
+            display: grid;
+            place-items: center;
+        }
+
+        .main-box {
+            height: 500px;
+            width: 280px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            /* background-image: linear-gradient(to bottom, rgb(171, 245, 171), lightseagreen, rgb(148, 88, 178)); */
+            background-image: url("assets/image/sun.png");
+            background-size: cover;
+            border-radius: 10px;
+        }
+
+        form {
+            display: flex;
+            gap: 15px;
+        }
+
+        form input {
+            flex-grow: 1;
+            height: 35px;
+            border: none;
+            outline: none;
+            padding-left: 10px;
+            border-radius: 20px;
+        }
+
+        form input::placeholder {
+            font-weight: 700;
+            font-family: cursive;
+        }
+
+        .search {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background-color: white;
+            color: black;
+        }
+
+        .search i {
+            font-size: 12px;
+        }
+
+        .weather {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .weather i{
+            font-size: 50px;
+            margin-top: 20px;
+        }
+
+        .temp {
+            font-size: 50px;
+            font-family: cursive;
+        }
+
+        .city {
+            font-size: 30px;
+            font-family: sans-serif;
+        }
+
+        .weather img {
+            width: 150px;
+            display: block;
+            margin-inline: auto;
+        }
+
+        .weather-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            width: 100%;
+            padding-inline: 20px;
+        }
+
+        .wind,
+        .humidity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: sans-serif;
+        }
+
+        .wind i,
+        .humidity i {
+            font-size: 20px;
+        }
+
+        .detail h4 {
+            font-size: 18px;
+        }
+
+        .detail p {
+            font-size: 13px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            width: 100%;
+            padding-inline: 20px;
+
+        }
+
+        .maxtemp,
+        .mintemp {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: sans-serif;
+        }
+
+        .maxtemp i,
+        .mintemp i {
+            font-size: 20px;
+        }
+
+        .mintemp {
+            margin-left: 12px
+        }
+
+        .detail h4 {
+            font-size: 18px;
+        }
+
+        .detail p {
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-box">
+        <form action="" id="main-form">
+            <input type="text" name="city" id="city" placeholder="Search">
+            <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </form>
+        <div class="weather">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <div class="temp"><span>22</span>°C</div>
+            <div class="city">New York</div>
+            <div class="weather-info">
+                <div class="humidity">
+                    <i class="fa-solid fa-cloud"></i>
+                    <div class="detail">
+                        <h4>64%</h4>
+                        <p>humidity</p>
+                    </div>
+                </div>
+                <div class="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="detail">
+                        <h4>64%</h4>
+                        <p>Wind speed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="maxtemp">
+                    <i class="fa-solid fa-temperature-high"></i>
+                    <div class="detail">
+                        <h4>64%</h4>
+                        <p>Max tempertaure</p>
+                    </div>
+                </div>
+                <div class="mintemp">
+                    <i class="fa-solid fa-temperature-low"></i>
+                    <div class="detail">
+                        <h4>64%</h4>
+                        <p>Min tempertaure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-color: black;
+            color: white;
+            display: grid;
+            place-items: center;
+        }
+        .main-box{
+            height: 400px;
+            width: 350px;
+            /* border: 2px solid lightseagreen; */
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            background-image: linear-gradient(to bottom, rgb(171, 245, 171) , lightseagreen, rgb(148, 88, 178));
+            border-radius: 10px;
+        }
+        form{
+            /* border: 2px solid gray; */
+            display: flex;
+            gap: 15px;
+        }
+        form input{
+            flex-grow: 1;
+            height: 35px;
+            border: none;
+            outline: none;
+            padding-left: 10px;
+            border-radius: 20px;
+        }
+        form input::placeholder{
+            font-weight: 700;
+            font-family: cursive;
+        }
+        .search{
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background-color: white;
+            color: black;
+        }
+        .search i{
+            font-size: 12px;
+        }
+        .weather{
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid red; */
+            align-items: center;
+            flex-grow: 1;
+        }
+        .temp{
+            font-size: 50px;
+            font-family: cursive;
+        }
+        .city{
+            font-size: 30px;
+            font-family: sans-serif;
+        }
+        .weather img{
+            width: 150px;
+            display: block;
+            margin-inline: auto;
+            /* border: 2px solid red; */
+        }
+        .weather-info{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            /* border: 2px solid red; */
+            width: 100%;
+            padding-inline: 20px;
+        }
+        .wind,.humidity{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            /* border: 2px solid green; */
+            font-family: sans-serif;
+        }
+        .wind i, .humidity i{
+            font-size: 20px;
+        }
+        .detail h4{
+            font-size: 18px;
+        }
+        .detail p{
+            font-size: 13px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main-box">
+        <form action="">
+            <input type="text" name="city" id="city" placeholder="Search">
+            <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </form>
+        <div class="weather">
+            <img src="weathersunny.webp" alt="" class="weather-img">
+            <div class="temp">22°C</div>
+            <div class="city">New York</div>
+            <div class="weather-info">
+                <div class="humidity">
+                    <i class="fa-solid fa-cloud"></i>
+                    <div class="detail">
+                        <h4>64%</h4>
+                        <p>humidity</p>
+                    </div>
+                </div>
+                <div class="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="detail">
+                        <h4>64%</h4>
+                        <p>humidity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let weathers = [
+            {
+                src:"hello",
+                temp:"35",
+                city:"mathura"
+            }
+        ]
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
